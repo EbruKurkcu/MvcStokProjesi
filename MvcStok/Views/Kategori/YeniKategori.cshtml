@@ -1,0 +1,23 @@
+﻿@model MvcStok.Models.Entity.TBLKATEGORILER
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    @*<div>
+        <label>KATEGORİ ADI</label>
+        <input type="text" class="form-control" name="KATEGORIAD" />
+
+    </div>*@
+    <div>
+        @Html.LabelFor(m => m.KATEGORIAD)
+        @Html.TextBoxFor(m => m.KATEGORIAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.KATEGORIAD, "", new { @style = "color:red" }) @*2.Validation(Doğrulama) İşlemi*@
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-warning">EKLE</button>
+    </div>
+</form>
+
